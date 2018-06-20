@@ -1,0 +1,14 @@
+{% for object in object_list %}
+     <p>{{ object.content }}<br>
+    {{ object.user }}<br>
+    {{ object.timestamp|timesince}} ago </p> <br> <br>
+{% endfor %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TweetMe | List</title>
+</head>
+<body>
+
+</body>
+</html>

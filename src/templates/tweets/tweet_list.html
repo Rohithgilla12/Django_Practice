@@ -1,0 +1,21 @@
+{% include "tweets/search_form.html" %} <br/>
+{% for object in object_list %}
+     <p>{{ object.content }}<br>
+    {{ object.user }}<br>
+    {{ object.timestamp|timesince}} ago </p> <br> <br>
+    {% empty %}
+    {% if request.GET.q %}
+        <p>No tweets found in the search :(</p>
+    {% else %}
+    <p>No tweets yet :(</p>
+    {% endif %}
+{% endfor %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TweetMe | List</title>
+</head>
+<body>
+
+</body>
+</html>
