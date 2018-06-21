@@ -1,13 +1,13 @@
-<h1>{{ object.content }}</h1><br>
-{{ object.user }}<br>
-{{ object.timestamp }} <br>
-{{ object.timestamp|timesince}} <br>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>TweetMe | ListView</title>
-</head>
-<body>
-
-</body>
-</html>
+{% extends "base.html" %}
+{% block content %}
+    <div class="row">
+        <div class="col-sm-3 pull-right" style="background-color:yellow;">
+            <h1>{{ object.user }}</h1>
+        </div>
+        <div class="col-sm-9 pull-left">
+        {{ object.content }}<br>
+        {{ object.timestamp }} |
+        {{ object.timestamp|timesince}} <br>
+        </div>
+    </div>
+{% endblock content %}
